@@ -7,10 +7,10 @@ __version__ = '2.3.0'
 
 # Load an ERRANT Annotator object for a given language
 # Assume english as the language
-def load(spacy_model, nlp=None):
+def load(lang, nlp=None):
 
     # Load spacy
-    nlp = nlp or spacy.load(spacy_model, disable=["ner"])
+    nlp = nlp or spacy.load(lang, disable=["ner"])
 
     # Load language edit merger
     merger = import_module("errant.en.merger")
