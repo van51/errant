@@ -8,7 +8,7 @@ __version__ = '2.3.0'
 # Load an ERRANT Annotator object for a given language
 def load(lang, nlp=None):
     # Make sure the language is supported
-    supported = {"en"}
+    supported = {"en", "en_core_web_sm"}
     if lang not in supported:
         raise Exception("%s is an unsupported or unknown language" % lang)
 
